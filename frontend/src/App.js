@@ -25,15 +25,20 @@ const App = () => {
     });
 
     const channel = pusher.subscribe("messages");
-    channel.bind("inserted", function (data) {
-      alert(JSON.stringify(data));
+    channel.bind("inserted", (newMessage) => {
+      setMessages([...messages, newMessage]);
     });
-  }, []);
+
+    return () => {
+      channel.unbind_all();
+      channel.unsubscribe();
+    };
+  }, [messages]);
 
   return (
     <div className="wrapper">
       <Sidebar />
-      <MainRoom />
+      <MainRoom messages={messages} />
     </div>
   );
 };

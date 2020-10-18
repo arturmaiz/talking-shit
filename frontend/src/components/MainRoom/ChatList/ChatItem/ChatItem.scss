@@ -1,0 +1,48 @@
+.speech-bubble.recevier {
+  position: relative;
+  background: #272d31;
+  border-radius: 0.4em;
+  max-width: 170px;
+  padding: 0.5em;
+  color: #fff;
+  margin: 1em 0;
+}
+
+.speech-bubble.recevier:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom-color: #272d31;
+  border-top: 0;
+  border-left: 0;
+  margin-left: -10px;
+  margin-top: -20px;
+}
+
+.speech-bubble.sender {
+  position: relative;
+  background: #114740;
+  border-radius: 0.4em;
+  margin: 1em 0;
+  padding: 0.5em;
+  color: #fff;
+}
+
+.speech-bubble.sender:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 20px solid transparent;
+  border-bottom-color: #114740;
+  border-top: 0;
+  border-right: 0;
+  margin-left: -10px;
+  margin-top: -20px;
+}
